@@ -1,0 +1,12 @@
+{
+  "Routes": [
+    {
+      "ServiceName": "discount",
+      "SwaggerKey": "discount",
+      "UpstreamHttpMethod": [ "Get" ],
+      "UpstreamPathTemplate": "/discounts/{id}",
+      "DownstreamPathTemplate": "/api/discounts/{id}",
+      "Key": "getdiscount"
+    }
+  ]
+}

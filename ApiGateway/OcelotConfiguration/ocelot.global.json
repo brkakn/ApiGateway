@@ -1,0 +1,18 @@
+{
+  "Aggregates": [
+    {
+      "RouteKeys": [ "getproduct", "getdiscount" ],
+      "UpstreamPathTemplate": "/product-with-discount/{id}"
+    }
+  ],
+  "GlobalConfiguration": {
+    "ServiceDiscoveryProvider": {
+      "Type": "AppConfiguration"
+    },
+    "RateLimitOptions": {
+      "QuotaExceededMessage": "Rate Limit Exceeded",
+      "HttpStatusCode": 429,
+      "ClientIdHeader": "MyRateLimitingHeader"
+    }
+  }
+}

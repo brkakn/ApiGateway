@@ -1,0 +1,23 @@
+{
+  "Routes": [
+    {
+      "ServiceName": "weather",
+      "SwaggerKey": "weather",
+      "UpstreamHttpMethod": [ "Get" ],
+      "UpstreamPathTemplate": "/weather/{id}",
+      "DownstreamPathTemplate": "/api/weatherforecast/getforecast/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7003
+        }
+      ],
+      "RouteIsCaseSensitive": false,
+      "FileCacheOptions": {
+        "TtlSeconds": 60,
+        "Region": "weathers"
+      }
+    }
+  ]
+}
